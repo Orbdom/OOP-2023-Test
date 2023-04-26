@@ -30,6 +30,40 @@ public class DANI extends PApplet {
 
 	}
 
+	public Class Follow() {
+		String word;
+		int count;
+
+		public Follow(String word, int count) {
+			this.word = word;
+			this.count = count;
+		}
+		
+		public String getWord() {
+			return word;
+		}
+	
+		public int getCount() {
+			return count;
+		}
+		
+		
+		public String toString() {
+			return word + " " + count;
+		}
+		return null;
+
+	}
+
+	public Class word(){
+		String word;
+    	ArrayList<Follow> follows;
+
+
+
+		return null;
+	}
+
 	float off = 0;
 
 	public void draw() 
