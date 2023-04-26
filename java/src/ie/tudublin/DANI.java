@@ -12,12 +12,18 @@ public class DANI extends PApplet {
 		size(1000, 1000);
 		//fullScreen(SPAN);
 	}
-
+	//loading a file
 	public void loadFile(String filename) {
 		String[] lines = loadStrings(filename);
 			split(lines,' ');
 			w.replaceAll("[^\\w\\s]","");
 			s.toLowerCase()
+	}
+	//printing
+	public void printmodel(){
+		for (Word w : words.values()) {
+        System.out.println(w.toString());
+    }
 	}
 
 
@@ -41,12 +47,12 @@ public class DANI extends PApplet {
 	public Class Follow() {
 		String word;
 		int count;
-
+		//constructor
 		public Follow(String word, int count) {
 			this.word = word;
 			this.count = count;
 		}
-		
+		//accessors
 		public String getWord() {
 			return word;
 		}
@@ -55,7 +61,7 @@ public class DANI extends PApplet {
 			return count;
 		}
 		
-		
+		//to string method
 		public String toString() {
 			return word + " " + count;
 		}
@@ -81,10 +87,11 @@ public class DANI extends PApplet {
 			this.word = word;
 			this.follows = follows;
 		}
-
-
-
+		public String toString() {
+			return word + " " + follows;
+		}
 		return null;
+
 	}
 
 
