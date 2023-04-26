@@ -13,6 +13,14 @@ public class DANI extends PApplet {
 		//fullScreen(SPAN);
 	}
 
+	public void loadFile(String filename) {
+		String[] lines = loadStrings(filename);
+			split(lines,' ');
+			w.replaceAll("[^\\w\\s]","");
+			s.toLowerCase()
+	}
+
+
     String[] sonnet;
 
     public String[] writeSonnet()
@@ -78,6 +86,7 @@ public class DANI extends PApplet {
 
 		return null;
 	}
+
 
 	float off = 0;
 
