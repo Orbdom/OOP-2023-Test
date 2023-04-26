@@ -59,6 +59,21 @@ public class DANI extends PApplet {
 		String word;
     	ArrayList<Follow> follows;
 
+		//getting access to word and follows
+		String getWord() {
+			return word;
+		}
+	
+		public ArrayList<Follow> getFollows() {
+			return follows;
+		}
+
+		// Constructor
+		public Word(String word, ArrayList<Follow> follows) {
+			this.word = word;
+			this.follows = follows;
+		}
+
 
 
 		return null;
