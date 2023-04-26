@@ -39,9 +39,13 @@ public class DANI extends PApplet {
 
        
 	}
-
+	// generate new sonnet on spacebar press
 	public void keyPressed() {
-
+		if (key == ' ') { 
+			for (String line : sonnet) {
+				System.out.println(line);
+			}
+		}
 	}
 
 	public Class Follow() {
