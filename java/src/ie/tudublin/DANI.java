@@ -108,6 +108,10 @@ public class DANI extends PApplet {
 		noStroke();
 		textSize(20);
         textAlign(CENTER, CENTER);
+
+		for (String lines:sonnet){
+			text(lines, X, Y, X, Y);
+		}
         
 	}
 }
