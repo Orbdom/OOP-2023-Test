@@ -6,42 +6,40 @@ import processing.core.PApplet;
 
 public class DANI extends PApplet {
 
-	
-
 	public void settings() {
 		size(1000, 1000);
-		//fullScreen(SPAN);
+		// fullScreen(SPAN);
 	}
-	//loading a file
+
+	// loading a file
 	public void loadFile(String filename) {
 		String[] lines = loadStrings(filename);
 			split(lines,' ');
 			w.replaceAll("[^\\w\\s]","");
 			s.toLowerCase()
 	}
-	//printing
-	public void printmodel(){
+
+	// printing
+	public void printmodel() {
 		for (Word w : words.values()) {
-        System.out.println(w.toString());
-    }
+			System.out.println(w.toString());
+		}
 	}
 
+	String[] sonnet;
 
-    String[] sonnet;
-
-    public String[] writeSonnet()
-    {
-        return null;
-    }
+	public String[] writeSonnet() {
+		return null;
+	}
 
 	public void setup() {
 		colorMode(HSB);
 
-       
 	}
+
 	// generate new sonnet on spacebar press
 	public void keyPressed() {
-		if (key == ' ') { 
+		if (key == ' ') {
 			for (String line : sonnet) {
 				System.out.println(line);
 			}
@@ -98,20 +96,18 @@ public class DANI extends PApplet {
 
 	}
 
-
 	float off = 0;
 
-	public void draw() 
-    {
+	public void draw() {
 		background(0);
 		fill(255);
 		noStroke();
 		textSize(20);
-        textAlign(CENTER, CENTER);
+		textAlign(CENTER, CENTER);
 
-		for (String lines:sonnet){
+		for (String lines : sonnet) {
 			text(lines, X, Y, X, Y);
 		}
-        
+
 	}
 }
